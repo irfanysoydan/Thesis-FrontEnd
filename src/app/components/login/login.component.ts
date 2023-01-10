@@ -38,10 +38,9 @@ export class LoginComponent implements OnInit {
           this.localStore.saveData('token', loginUser.token);
           this.localStore.saveData('isLoggedIn', '1');
 
-          alert("Giriş Yapıldı")
-          // this.router.navigate(['/home']).then(() => {
-          //   window.location.reload();
-          // });
+          this.router.navigate(['/home']).then(() => {
+            window.location.reload();
+          });
         }
       });
     } else {

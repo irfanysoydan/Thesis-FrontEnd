@@ -1,43 +1,13 @@
 <div class="container">
   <div class="scrollmenu" id="scrollbar">
-    <div class="card">
+    <div class="card" *ngFor="let election of elections">
       <img src="../../../assets/e-devlet.png" alt="Avatar" />
       <div class="content">
-        <h4><b>Başkanlık Seçimi</b></h4>
+        <h4>
+          <b>{{ election.name }}</b>
+        </h4>
         <p>Genel</p>
-        <a href="election"><button>Oyla</button></a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="../../../assets/usa.png" alt="Avatar" />
-      <div class="content">
-        <h4><b>Başkanlık Seçimi</b></h4>
-        <p>Genel</p>
-        <a href="election"><button>Oyla</button></a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="../../../assets/europe.png" alt="Avatar" />
-      <div class="content">
-        <h4><b>Başkanlık Seçimi</b></h4>
-        <p>Genel</p>
-        <a href="election"><button>Oyla</button></a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="../../../assets/usa.png" alt="Avatar" />
-      <div class="content">
-        <h4><b>Başkanlık Seçimi</b></h4>
-        <p>Genel</p>
-        <a href="election"><button>Oyla</button></a>
-      </div>
-    </div>
-    <div class="card">
-      <img src="../../../assets/europe.png" alt="Avatar" />
-      <div class="content">
-        <h4><b>Başkanlık Seçimi</b></h4>
-        <p>Genel</p>
-        <a href="election"><button>Oyla</button></a>
+        <button (click)="navigateDetails(election._id)">Oyla</button>
       </div>
     </div>
   </div>
