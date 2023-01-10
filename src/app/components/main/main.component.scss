@@ -6,17 +6,21 @@
     height: 100%;
     background-image: url("../../../assets/blockchain.jpg");
     opacity: 1;
+
     h1 {
         font-size: 100px;
         color: white;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
+
     button {
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         box-shadow: none;
         color: black;
         background-color: white;
         width: 80vw;
+        justify-content: center;
+        align-items: center;
         max-width: 300px;
         font-size: 1.3em;
         margin: auto;

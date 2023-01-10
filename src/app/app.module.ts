@@ -14,6 +14,7 @@ import { MainComponent } from './components/main/main.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { ElectionComponent } from './components/election/election.component';
+import { AuthGuard } from './utils/auth-guard';
 
 @NgModule({
   declarations: [
@@ -32,10 +33,9 @@ import { ElectionComponent } from './components/election/election.component';
     MatIconModule,
     MatToolbarModule,
     MatButtonModule,
-    HttpClientModule 
-    
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
