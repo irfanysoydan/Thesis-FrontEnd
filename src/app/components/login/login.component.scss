@@ -1,0 +1,79 @@
+.login {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    .g-box-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin: 100px auto;
+        padding-bottom: 15px;
+        background-color: whitesmoke;
+        border-radius: 5%;
+
+        h2 {
+            display: flex;
+            border-radius: 5px;
+            text-align: center;
+            width: 80vw;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            max-width: 400px;
+        }
+
+        .inputs {
+            margin: 10px 30px 50px 30px;
+            display: flex;
+            flex-direction: column;
+
+            input {
+                margin-top: 50px;
+                background: 0;
+                border: 0;
+                border-bottom: 1px solid black;
+                outline: none;
+                width: 80vw;
+                max-width: 400px;
+                font-size: 1.2em;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+
+        button {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            box-shadow: none;
+            color: white;
+            background-color: black;
+            width: 80vw;
+            max-width: 400px;
+            font-size: 1.3em;
+            margin: auto;
+            margin-bottom: 20px;
+            height: 40px;
+            transition-duration: 0.4s;
+        }
+
+        button:hover {
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+
+        p {
+            margin: auto;
+            margin-bottom: 5px;
+            font-size: medium;
+        }
+    }
+}

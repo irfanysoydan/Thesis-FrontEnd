@@ -1,0 +1,27 @@
+<div class="register">
+  <div class="g-box-container">
+    <h2>Kayıt Ol</h2>
+    <div class="inputs">
+      <input type="number" placeholder="Kimlik Numarası" #idnumber />
+      <input type="text" placeholder="Ad" #firstname />
+      <input type="text" placeholder="Soyad" #lastname />
+      <input type="number" placeholder="Doğum Yılı" #birthyear />
+      <input type="password" placeholder="Şifre" #pass />
+    </div>
+
+    <button
+      (click)="
+        register(
+          idnumber.value,
+          firstname.value,
+          lastname.value,
+          birthyear.value,
+          pass.value
+        )
+      "
+    >
+      Kayıt Ol
+    </button>
+    <p>Hesabın var mı? <a href="login">Giriş Yap</a></p>
+  </div>
+</div>

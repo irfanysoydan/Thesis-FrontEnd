@@ -1,0 +1,12 @@
+<div class="login">
+  <div class="g-box-container">
+    <h2>Giriş Yap</h2>
+    <div class="inputs">
+      <input type="number" placeholder="Kimlik Numarası" #idnumber />
+      <input type="password" placeholder="Şifre" #pass />
+    </div>
+
+    <button (click)="login(idnumber.value, pass.value)">Giriş Yap</button>
+    <p>Hesabın yok mu? <a href="register">Kayıt Ol</a></p>
+  </div>
+</div>
