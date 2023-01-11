@@ -15,6 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { ElectionComponent } from './components/election/election.component';
 import { AuthGuard } from './utils/auth-guard';
+import { StatsComponent } from './components/stats/stats.component';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { AuthGuard } from './utils/auth-guard';
     MainComponent,
     HomeComponent,
     ElectionComponent,
+    StatsComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,9 +36,10 @@ import { AuthGuard } from './utils/auth-guard';
     MatIconModule,
     MatToolbarModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    NgApexchartsModule,
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

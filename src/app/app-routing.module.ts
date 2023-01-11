@@ -5,6 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { MainComponent } from './components/main/main.component';
 import { RegisterComponent } from './components/register/register.component';
+import { StatsComponent } from './components/stats/stats.component';
 import { AuthGuard } from './utils/auth-guard';
 
 const routes: Routes = [
@@ -21,12 +22,18 @@ const routes: Routes = [
     component: RegisterComponent,
   },
   {
-    path: 'home', canActivate: [AuthGuard],
+    path: 'home',
+    canActivate: [AuthGuard],
     component: HomeComponent,
   },
   {
-    path: 'election', canActivate: [AuthGuard],
+    path: 'election',
+    canActivate: [AuthGuard],
     component: ElectionComponent,
+  },
+  {
+    path: 'stats',
+    component: StatsComponent,
   },
 ];
 
@@ -34,4 +41,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
