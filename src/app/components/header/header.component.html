@@ -1,12 +1,23 @@
 <div class="container">
   <p>
     <mat-toolbar color="primary">
-      <span onclick="window.location.href =''" style="cursor: pointer;">Blockchain E-Voting System</span>
+      <span onclick="window.location.href =''" style="cursor: pointer"
+        >Blockchain E-Voting System</span
+      >
       <span class="example-spacer"></span>
-      
-      <span onclick="window.location.href ='login'" style="cursor: pointer;">Login</span>
-      <span><|></span>
-      <span onclick="window.location.href ='register'" style="cursor: pointer;">Register</span>
+      <div class="profile-section" *ngIf="isLogin">
+       
+        <span (click)="Logout()" style="cursor: pointer"> <i class="fa fa-sign-out" style="font-size:20px;"></i> Çıkış Yap</span>
+      </div>
+      <div class="profile-section" *ngIf="!isLogin">
+        <span onclick="window.location.href ='login'" style="cursor: pointer"
+          ><i class="fa fa-sign-in" aria-hidden="true" style="margin-right: 5px; font-size: 20px;"></i>Login</span
+        >
+        <span>|</span>
+        <span onclick="window.location.href ='register'" style="cursor: pointer"
+          > <i class="fa fa-user" aria-hidden="true" style="margin-right: 7px; font-size: 20px;"></i>Register</span
+        >
+      </div>
     </mat-toolbar>
   </p>
 </div>
