@@ -5,7 +5,8 @@ import { initWallet } from 'src/app/models/wallet.model';
 import { AuthService } from 'src/app/services/auth.service';
 import { LocalService } from 'src/app/services/local.service';
 import Swal from 'sweetalert2';
-
+const CryptoJS = require("crypto-js");
+const { SHA256, enc } = CryptoJS;
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -65,7 +66,7 @@ export class RegisterComponent implements OnInit {
               'success'
             ).then(() => {
               const { privateKey, publicKey } = initWallet();
-              this.localService.saveData("publicKey", publicKey);
+              this.localService.saveData("publicKey", SHA256(publicKey).toString(enc.hex));
               Swal.fire('Dikkat anahtarı saklayın <br> Kimseyle paylaşmayın', `<b>Özel Anahtar:</b><br><br>${privateKey}`, 'warning');
             });
 
