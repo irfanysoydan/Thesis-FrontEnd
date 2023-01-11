@@ -65,6 +65,7 @@ export class ElectionComponent implements OnInit {
               this.blockchainService.sendTransactionToBlockchain(tx).subscribe(response => {
                 if (response.success) {
                   Swal.fire("Tebrikler", "Başarılı bir şekilde oy kullandınız", "success");
+                  this.isVoted = true;
                 } else {
                   Swal.fire("Oy kullanmadınız!", "Sistemsel bir hata oluştu.", "error")
                 }
