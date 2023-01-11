@@ -1,7 +1,7 @@
 <div class="container">
   <div class="scrollmenu" id="scrollbar">
     <div class="card" *ngFor="let election of elections">
-      <img src="../../../assets/e-devlet.png" alt="Avatar" />
+      <img src={{election.image}} alt="Avatar" />
       <div class="content">
         <h4>
           <b>{{ election.name }}</b>

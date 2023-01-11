@@ -4,4 +4,5 @@ export class Election {
   parties?: [];
   isFinished?: boolean;
   winner?: string;
+  image?: string;
 }
