@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="!isVoted; else voted">
   <div class="card" *ngFor="let party of parties">
     <img src="{{ party.image }}" alt="Avatar" />
     <div class="content">
@@ -10,3 +10,9 @@
     </div>
   </div>
 </div>
+
+<ng-template #voted>
+  <div class="container voted">
+    <h1>Başarılı bir şekilde oy kullandınız.</h1>
+  </div>
+</ng-template>
