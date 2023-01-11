@@ -32,10 +32,9 @@ import { ElectionComponent } from './components/election/election.component';
     MatIconModule,
     MatToolbarModule,
     MatButtonModule,
-    HttpClientModule 
-    
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
