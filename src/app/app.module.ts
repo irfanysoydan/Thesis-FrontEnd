@@ -33,9 +33,9 @@ import { AuthGuard } from './utils/auth-guard';
     MatIconModule,
     MatToolbarModule,
     MatButtonModule,
-    HttpClientModule,
+    HttpClientModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

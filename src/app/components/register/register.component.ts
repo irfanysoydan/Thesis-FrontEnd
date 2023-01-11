@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'src/app/models/user.model';
+import { initWallet } from 'src/app/models/wallet.model';
 import { AuthService } from 'src/app/services/auth.service';
+import { LocalService } from 'src/app/services/local.service';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -12,8 +14,8 @@ import Swal from 'sweetalert2';
 export class RegisterComponent implements OnInit {
   isError: boolean = false;
   message: string = '';
-  constructor(private authService: AuthService, private router: Router) {}
-  ngOnInit(): void {}
+  constructor(private authService: AuthService, private router: Router, private localService: LocalService) { }
+  ngOnInit(): void { }
 
   register(
     idnumber: string,
@@ -61,7 +63,12 @@ export class RegisterComponent implements OnInit {
               'Kayıt Başarılı',
               'Başarılı bir şekilde kayıt olundu!',
               'success'
-            );
+            ).then(() => {
+              const { privateKey, publicKey } = initWallet();
+              this.localService.saveData("publicKey", publicKey);
+              Swal.fire('Dikkat anahtarı saklayın <br> Kimseyle paylaşmayın', `<b>Özel Anahtar:</b><br><br>${privateKey}`, 'warning');
+            });
+
             this.router.navigate(['/login']);
           } else {
             Swal.fire('Hata', 'Kayıt olurken hata oluştu!', 'error');
