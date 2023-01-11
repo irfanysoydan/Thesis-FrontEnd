@@ -6,7 +6,7 @@
         <b>{{ party.name }}</b>
       </h4>
       <p>{{ party.person }}</p>
-      <a href="election"><button>Oyla</button></a>
+      <button (click)="vote(party.id, party.name)">Oyla</button>
     </div>
   </div>
 </div>
