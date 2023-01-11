@@ -1,11 +1,11 @@
 <div class="container">
   <div class="card" *ngFor="let party of parties">
-    <img src="../../../assets/img_avatar.png" alt="Avatar" />
+    <img src="{{ party.image }}" alt="Avatar" />
     <div class="content">
       <h4>
         <b>{{ party.name }}</b>
       </h4>
-      <p>Genel</p>
+      <p>{{ party.person }}</p>
       <a href="election"><button>Oyla</button></a>
     </div>
   </div>
